@@ -1,0 +1,11 @@
+localhost:3355/actuator/refresh 刷新 3355 post 请求
+
+http://erlang.org/download/otp_win64_21.3.exe   erlang 消息中间件的运行环节   下载地址
+
+
+https://dl.bintray.com/rabbitmq/all/rabbitmq-server/3.7.14/rabbitmq-server-3.7.14.exe
+
+
+我的目录是：D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin
+
+然后在后面输入rabbitmq-plugins enable rabbitmq_management命令进行安装
