@@ -1,0 +1,37 @@
+server:
+  port: 3366
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master
+      name: config
+      profile: dev
+      uri: http://localhost:3344
+    #rabbit相关配置 15672是web管理界面的端口，5672是MQ访问的端口
+    rabbitmq:
+      host: localhost
+      port: 15672
+      username: guest
+      password: guest
+eureka:
+  client:
+    #false表示不向注册中心注册自己
+    register-with-eureka: true
+
+    #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    fetch-registry: true
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      #defaultZone : http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+      defaultZone : http://eureka7001.com:7001/eureka
+  instance:
+    instance-id: configClient
+    prefer-ip-address: true #访问路径可以显示IP地址
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
