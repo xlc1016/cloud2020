@@ -1,0 +1,2 @@
+#########springcloudStream 是构建消息驱动微服务的框架####################
+应用是通过inputs或是outputs来与springcloudstream中binder对象交互 现在只支持mabbitMQ和kafka
