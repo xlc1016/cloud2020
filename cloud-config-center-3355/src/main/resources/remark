@@ -9,3 +9,8 @@ https://dl.bintray.com/rabbitmq/all/rabbitmq-server/3.7.14/rabbitmq-server-3.7.1
 我的目录是：D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.3\sbin
 
 然后在后面输入rabbitmq-plugins enable rabbitmq_management命令进行安装
+
+
+localhost:3344/actuator/bus-refresh   发post请求   总线发 客服端更新
+
+定点通知： localhost:3344/actuator/bus-refresh/servcename:端口号
