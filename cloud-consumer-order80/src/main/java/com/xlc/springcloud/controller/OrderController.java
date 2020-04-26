@@ -21,7 +21,8 @@ import java.util.List;
 public class OrderController {
 
  //  private static final String PAYMENT_URL="http://localhost:8001";
-   private static final String PAYMENT_URL="http://CLOUD-PRVIDE-SRVICE";
+ //  private static final String PAYMENT_URL="http://CLOUD-PRVIDE-SRVICE";
+   private static final String PAYMENT_URL="http://localhost:8001";
 
 
    @Resource
@@ -67,5 +68,12 @@ public class OrderController {
           }
 
       }
+
+    //============> zipkin + sleuth
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin(){
+        String result = restTemplate.getForObject("http://localhost:8001" + "/payment/zipkin", String.class);
+        return result;
+    }
 
 }
