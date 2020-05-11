@@ -35,6 +35,7 @@ bash -f ./startup.sh -p 5555(5555 端口号)
 
 单机启动命令
 sh startup.sh -m standalone
+bash -f ./startup.sh -m standalone
 
 ----------------------nginx--------------------------------------
 
@@ -46,7 +47,7 @@ sudo nginx -v  --查看nginx 的版本
 
  sudo systemctl stop nginx --停止nginx
 
- sudo systemctl start nginx -- 启动nginx
+ -- 启动nginx
 
  sudo systemctl restart nginx -- 重启nginx
 
