@@ -1,0 +1,29 @@
+seata 官网
+https://seata.io/zh-cn/
+
+
+修改文件
+file  文件修改
+1：（service）  vgroup_mapping.my_test_tx_group = "xlc_tx_group" （xlc_tx_group） 从默认修改为xlc_tx_group
+2：（store）   修改mode =‘db’
+3：db {
+      ## the implement of javax.sql.DataSource, such as DruidDataSource(druid)/BasicDataSource(dbcp) etc.
+      datasource = "dbcp"
+      ## mysql/oracle/h2/oceanbase etc.
+      db-type = "mysql"
+      driver-class-name = "com.mysql.jdbc.Driver"
+      url = "jdbc:mysql://127.0.0.1:3306/seata" // 本地数据库的链接 密码和用户名
+      user = "root"
+      password = "123456"
+    }
+ 4: regidtry 文件修改 注册进nacos
+
+registry {
+  # file 、nacos 、eureka、redis、zk、consul、etcd3、sofa
+  type = "nacos"
+
+  nacos {
+    serverAddr = "localhost:8848"
+    namespace = ""
+    cluster = "default"
+  }
